@@ -7,17 +7,25 @@ body {
     font-weight: 400;
     font-style: normal;
     margin: 0;
+    font-size: 1.125rem;
 }
 
 nav {
     display: flex;
     background-color: #3B5FFF;
-    padding: 15px 60px;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: sticky;
     top: 0;
+}
+
+.max-size {
+    padding: 3vh;
+    width: 100vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
 }
 
 nav * {
@@ -28,14 +36,22 @@ nav * {
     text-align: center;
 }
 
-nav .logo *{
+nav h1 {
+    margin: 0;
+}
+
+nav h1 *{
     font-size: 3rem;
     font-weight: 900;
     color: #ffffff;
 }
 
-nav .blue{
-    color: #8EA8FF
+.blue{
+    color: #7796F2;
+}
+
+.darkest-blue{
+    color: #3B5FFF;
 }
 
 nav ul {
@@ -46,7 +62,7 @@ nav ul {
 }
 
 nav ul *{
-    color: #bfcbfb;
+    color: #7796F2;
     font-size: 1.25rem;
 }
 
@@ -55,28 +71,57 @@ nav ul *:hover{
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: #7796F2;
-    display: flex;
 }
 
 footer .copyright{
     margin-right: auto;
 }
 
+footer .credit {
+    text-align: right;
+}
+
 footer * {
     color: #ffffff;
 }
 
-footer .copyright, footer .credit{
-    padding: 15px 60px;
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-main {
-    width: 100%;
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.section1 {
+    width: 100vw;
     max-width: 1200px;
-    white-space: wrap;
+    padding: 3vh;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+.section1 img {
+    display: block;
+    width: 100%;
+    min-width: 300px;
+    align-self: center;
+    flex: 3;
+}
+
+.section1 div {
+    display: block;
+    width: 100%;
+    min-width: 300px;
+    align-self: center;
+    flex: 2;
 }
