@@ -16,6 +16,8 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 nav * {
@@ -45,14 +47,36 @@ nav ul {
 
 nav ul *{
     color: #bfcbfb;
+    font-size: 1.25rem;
+}
+
+nav ul *:hover{
+    color: #ffffff;
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
+    background-color: #7796F2;
+    display: flex;
+}
+
+footer .copyright{
+    margin-right: auto;
+}
+
+footer * {
+    color: #ffffff;
+}
+
+footer .copyright, footer .credit{
+    padding: 15px 60px;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    white-space: wrap;
 }
