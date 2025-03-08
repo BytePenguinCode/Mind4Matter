@@ -110,7 +110,7 @@ footer * {
 h2 {
     font-size: 3rem;
     font-weight: 700;
-    margin: 20px 0;
+    margin: 0;
     text-align: center;
 }
 
@@ -148,7 +148,10 @@ h2 {
     max-width: 1200px;
     padding: 3vh;
     margin: 0 auto;
-    gap: 24px;
+}
+
+.section2 > *{
+    margin: 15px;
 }
 
 .section2 form{
