@@ -174,3 +174,53 @@ h2 {
     background-color: #ffffff;
     color: #7796F2;
 }
+
+.fullscreen{
+    /*janky fix to make it fullscreen lol */
+    min-height: 77vh;
+    height: fit-content;
+    display: flex;
+}
+
+.registration {
+    margin: auto;
+}
+
+.registration-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    max-width: 1200px;
+    justify-content: center;
+    height: fit-content;
+    gap: 30px;
+}
+
+.registration-card {
+    width: 350px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 0 15px #13205a;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.registration-card h3{
+    font-size: 1.5rem;
+}
+
+.registration-card p{
+    font-size: 1.25rem;
+}
+
+.registration-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #3B5FFF;
+    background-color: #7796F2;
+    color: #ffffff;
+}
