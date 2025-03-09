@@ -180,6 +180,7 @@ h2 {
     min-height: 77vh;
     height: fit-content;
     display: flex;
+    padding: 30px;
 }
 
 .registration {
