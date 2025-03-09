@@ -22,7 +22,7 @@ nav {
 .max-size {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 7.5vw;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
@@ -116,11 +116,11 @@ h2 {
 
 .section1 {
     max-width: 1200px;
-    padding: 30px;
+    padding: 7.5vw;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     gap: 24px;
 }
 
@@ -146,7 +146,7 @@ h2 {
 
 .section2 {
     max-width: 1200px;
-    padding: 30px;
+    padding: 7.5vw;
     margin: 0 auto;
 }
 
@@ -180,7 +180,7 @@ h2 {
     min-height: 77vh;
     height: fit-content;
     display: flex;
-    padding: 30px;
+    padding: 7.5vw;
 }
 
 .registration {
