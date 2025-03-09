@@ -82,12 +82,12 @@ nav ul {
 }
 
 nav ul *{
-    color: #7796F2;
+    color: #ffffff;
     font-size: 1.25rem;
 }
 
 nav ul *:hover{
-    color: #ffffff;
+    color: #7796F2;
 }
 
 main {
