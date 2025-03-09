@@ -1,0 +1,85 @@
+name: Sync Repositories
+
+on:
+  push:
+    branches:
+      - main  # Runs on every push to main branch
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the destination repo
+      - name: Checkout Destination Repository
+        uses: actions/checkout@v4
+        with:
+          repository: "granwyntan/Mind4Matter"
+          token: ${{ secrets.GH_PAT }}  # Ensure this secret is set
+          path: destination  # Clone into "destination" folder
+
+      # Set up Git for the destination repo
+      - name: Configure Git for Destination Repo
+        run: |
+          echo "[LOG] Setting up Git"
+          git config --global user.email "${{ secrets.USER_EMAIL }}"
+          git config --global user.name "${{ secrets.USER_NAME }}"
+
+      # Add source repository as remote and fetch changes
+      - name: Add Source Repository
+        run: |
+          cd destination
+          echo "[LOG] Adding source remote repository"
+          git remote add source https://${{ secrets.GH_PAT }}@github.com/BytePenguinCode/Mind4Matter.git
+          echo "[LOG] Fetching changes from source repository"
+          git fetch source  # Fetch the latest changes from source repo
+
+      # Clean the destination repo (remove old files)
+      - name: Clean Destination Repository
+        run: |
+          cd destination
+          echo "[LOG] Cleaning destination repository"
+          git rm -r --cached .  # Remove all files from the git index (without deleting from local)
+          git commit -m "Clean the repository before syncing new files"  # Commit the removal of old files
+
+      # Clone the source repository into a temporary folder
+      - name: Checkout Source Repository
+        uses: actions/checkout@v4
+        with:
+          repository: "BytePenguinCode/Mind4Matter"
+          token: ${{ secrets.GH_PAT }}
+          path: temp  # Clone into a temporary folder
+
+      # Copy files from the source repository into the destination repo directory
+      - name: Copy Files from Source Repo to Destination Repo
+        run: |
+          echo "[LOG] Copying files from BytePenguinCode/Mind4Matter"
+          cp -r temp/* destination/  # Copy all files from source repo to destination folder
+
+      # Debug Git Status (optional)
+      - name: Debug Git Status
+        run: |
+          cd destination
+          echo "[LOG] Checking Git Status"
+          git status
+
+      # Stage, commit, and push changes to the destination repository
+      - name: Sync and Push Changes to Destination Repo
+        run: |
+          cd destination
+          echo "[LOG] Staging new files"
+          git add .
+          
+          # Check if there are any changes before committing
+          if git diff --staged --quiet; then
+            echo "[LOG] No changes detected."
+            exit 0
+          fi
+
+          echo "[LOG] Committing new files"
+          git commit -m "Sync new files from BytePenguinCode/Mind4Matter"
+          echo "[LOG] Pushing changes to granwyntan/Mind4Matter"
+
+          # Push the changes to the destination repository
+          git push origin main || { echo "[ERROR] Push failed!"; exit 1; }
