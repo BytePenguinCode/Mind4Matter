@@ -9,7 +9,7 @@ body {
     font-weight: 400;
     font-style: normal;
     margin: 0;
-    font-size: 1.125rem;
+    font-size: 2vh;
     overflow-x: hidden;
 }
 
@@ -41,7 +41,7 @@ nav h1 {
 }
 
 nav h1 *{
-    font-size: 3rem;
+    font-size: 5vh;
     font-weight: 900;
     color: #ffffff;
 }
@@ -83,7 +83,7 @@ nav ul {
 
 nav ul *{
     color: #ffffff;
-    font-size: 1.25rem;
+    font-size: 2.5vh;
 }
 
 nav ul *:hover{
@@ -108,7 +108,7 @@ footer * {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 5vh;
     font-weight: 700;
     margin: 0;
     text-align: center;
@@ -160,7 +160,7 @@ h2 {
 
 .section2 button{
     margin: 0 auto;
-    font-size: 1.25rem;
+    font-size: 2.5vh;
     padding: 15px;
     border-radius: 15px;
     border: none;
@@ -197,7 +197,9 @@ h2 {
 }
 
 .registration-card {
-    width: 350px;
+    width: 25vw;
+    min-width: 275px;
+    max-width: 350px;
     align-items: center;
     text-align: center;
     padding: 15px;
@@ -211,11 +213,11 @@ h2 {
 }
 
 .registration-card h3{
-    font-size: 1.5rem;
+    font-size: 3vh;
 }
 
 .registration-card p{
-    font-size: 1.25rem;
+    font-size: 2.5vh;
 }
 
 .registration-card:hover {
