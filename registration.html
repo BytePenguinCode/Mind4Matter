@@ -1,95 +1,99 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <!-- meta -->
+        <!-- Meta Information -->
         <meta charset="utf-8">
         <title>Mind4Matter - Registration</title>
         <meta name="author" content="Mind4Matter">
         <meta name="description" content="A global youth-led non-profit organisation that supports mental health">
-
-        <!--css-->
-        <link rel="stylesheet" href="style.css">
-
-        <!--Tells the browser to make it the width of the device-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!--favicon-->
-        <link rel="icon" href="assets/Mind4Matter%20Logo.png" type="image/png">
-
-        <!--open graph data-->
-        <meta name="og:title" content="Mind4Matter">
-        <meta property = "og:type" content="website">
-        <meta property = "og:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
-        <meta property = "og:url" content="https://mind4matter.vercel.app/registration.html">
-
-        <!--twitter card-->
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+        
+        <!-- Favicon -->
+        <link rel="icon" href="assets/Mind4Matter%20Logo.png?" type="image/png">
+        
+        <!-- Open Graph Data -->
+        <meta property="og:title" content="Mind4Matter">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
+        <meta property="og:url" content="https://mind4matter.vercel.app/registration.html">
+        
+        <!-- Twitter Card -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="Mind4Matter">
-        <meta property = "twitter:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
+        <meta property="twitter:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
     </head>
     <body>
-        <!--navbar-->
-        <nav>
-            <div class="max-size">
+    <!-- Navbar -->
+    <nav>
+        <div class="max-size">
+            <!-- Logo + Title -->
+            <div class="nav-logo">
+                <img src="assets/Mind4Matter logo no background.png" alt="Mind4Matter Logo">
                 <h1>
                     <a href="index.html" title="Home page">
                         Mind<span class="blue">4</span>Matter
                     </a>
                 </h1>
-                <ul>
-                    <li>
-                        <a href="index.html" title="Home page">Home</a>
-                    </li>
-                    <li>
-                        <a href="team.html" title="More about our team">Our Team</a>
-                    </li>
-                    <li>
-                        <a href="registration.html" title="Join us today!">Registration</a>
-                    </li>
-                </ul>
             </div>
-        </nav>
-        <main>
-            <!--cards-->
-            <div class="fullscreen">
-                <div class="registration">
-                    <h2 class="darkest-blue">Registration</h2>
-                    <div class="registration-cards">
-                        <a href="https://forms.gle/uopVkE2s46kCLiEj9" title="Sign up to be a member!" class="registration-card">
-                            <div>
-                                <h3>Members registration</h3>
-                                <p>Be part of a global youth-led non-profit organisation that supports mental health</p>
-                            </div>
-                        </a>
-                        <a href="https://forms.gle/rmVKMtqABppMUwPT9" title="Sign up to be a leader!" class="registration-card">
-                            <div>
-                                <div>
-                                    <h3>Leadership applicaction</h3>
-                                    <p>Represent Mind4Matter at events worldwide and take charge of your Mind4Matter journey</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://forms.gle/NLXtm8pg5DQ1c1NS6" title="Start your own Mind4Matter chapter!" class="registration-card">
-                            <div>
-                                <div>
-                                    <h3>Chapters application</h3>
-                                    <p>Host, plan, and lead Mind4Matter events locally, raising awarness of mental wellbeing</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+
+            <!-- Hamburger Menu (for Mobile) -->
+            <button class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul id="nav-menu">
+                <li><a href="index.html" title="Home page">Home</a></li>
+                <li><a href="team.html" title="More about our team">Our Team</a></li>
+                <li><a href="registration.html" title="Join us today!">Registration</a></li>
+            </ul>
+        </div>
+    </nav>
+        
+        <!-- Registration Section -->
+        <main class="registration-page">
+            <div class="registration-container">
+                <h2 class="fancy-heading">Join <span>Mind4Matter</span></h2>
+                <p class="registration">Take part in a global movement promoting mental well-being and community support. Choose your role and begin your journey with us.</p>
+                
+                <div class="registration-cards">
+                    <a href="https://forms.gle/uopVkE2s46kCLiEj9" class="registration-card">
+                        <h3>Members Registration</h3>
+                        <p>Become a part of a global youth-led non-profit organization and contribute to mental health advocacy.</p>
+                    </a>
+                    
+                    <a href="https://forms.gle/rmVKMtqABppMUwPT9" class="registration-card">
+                        <h3>Leadership Application</h3>
+                        <p>Represent Mind4Matter at global events, lead initiatives, and help drive change.</p>
+                    </a>
+                    
+                    <a href="https://forms.gle/NLXtm8pg5DQ1c1NS6" class="registration-card">
+                        <h3>Chapter Application</h3>
+                        <p>Start your own Mind4Matter chapter, plan local events, and raise awareness in your community.</p>
+                    </a>
                 </div>
             </div>
         </main>
+        
+        <!-- Footer -->
         <footer>
             <div class="max-size">
-                <p class="copyright">
-                    © 2025 Mind4Matter. All rights reserved.
-                </p>
-                <p class="credit">
-                    Made with <a href="https://www.bytepenguin.com/" title="BytePenguin's website">BytePenguin</a>
-                </p>
+                <p class="copyright">© 2025 Mind4Matter. All rights reserved.</p>
+                <p class="credit">Made with courtesy of <a href="https://www.bytepenguin.com/" title="BytePenguin's website">BytePenguin</a></p>
             </div>
         </footer>
+
+        <script>
+            function toggleMenu() {
+                document.getElementById("nav-menu").classList.toggle("active");
+                document.querySelector(".hamburger").classList.toggle("active");
+            }
+        </script>
+
     </body>
 </html>

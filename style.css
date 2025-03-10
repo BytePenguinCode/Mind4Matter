@@ -13,25 +13,195 @@ body {
     overflow-x: hidden;
 }
 
+/* Fancy Heading */
+.fancy-heading {
+    font-size: 3rem; /* Make it much bigger */
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+/* Highlight "Supporting" */
+.fancy-heading span {
+    color: #3B5FFF; /* Darkest Blue */
+    font-style: italic;
+    font-weight: 800;
+    text-shadow: 2px 2px 10px rgba(59, 95, 255, 0.4);
+}
+
+/* Navbar */
 nav {
     background-color: #3B5FFF;
     position: sticky;
     top: 0;
+    width: 100%;
+    padding: 10px 0; /* Slimmer navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
+/* Navbar Container */
 .max-size {
     display: flex;
-    flex-wrap: wrap;
-    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    justify-content: space-between;
 }
 
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-logo a {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Desktop Menu */
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #7796F2;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+    display: none; /* Default: Hidden on larger screens */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    z-index: 1100; /* Ensure it stays above other elements */
+}
+
+/* Hamburger Bars */
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Menu */
 @media (max-width: 768px) {
+    .hamburger {
+        display: flex !important; /* Ensure it appears on mobile */
+    }
+
+    /* Ensure Navigation Menu is Hidden Initially */
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #3B5FFF;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* Active state for menu */
+    nav ul.active {
+        right: 0;
+    }
+
+    /* Rotate effect when menu opens */
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translateY(7px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-7px);
+    }
+}
+
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    /* Hide default menu */
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hide menu off-screen initially */
+        width: 250px;
+        height: 100vh;
+        background-color: #3B5FFF;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+    }
+
+    /* Active class when menu is open */
+    nav ul.active {
+        right: 0; /* Slide menu into view */
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Rotate effect when menu opens */
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translateY(7px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-7px);
+    }
+}
+
     .carousel-container {
         padding: 30px 0; /* More space */
         min-height: 250px; /* Ensure height */
+        overflow: hidden;
     }
     
     .carousel-track {
@@ -52,15 +222,13 @@ nav {
         height: 90px;
     }
 
-    /* Optional: Adjust glow effect for mobile */
     .team-card.active-glow {
         box-shadow: 0px 0px 8px rgba(59, 95, 255, 0.4) !important;
     }
-}
-
-a {
-    text-decoration: none;
-}
+    
+    a {
+        text-decoration: none;
+    }
 
 nav h1 {
     margin: auto 0;
@@ -117,12 +285,20 @@ nav ul *:hover{
 }
 
 main {
-    width: 100%;
+    flex: 1; /* Allows <main> to take up all available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    padding-bottom: 50px;
 }
 
 footer {
     width: 100%;
     background-color: #7796F2;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    font-size: 0.9rem
 }
 
 footer p {
@@ -152,6 +328,73 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
+    line-height: 1.4;
+}
+
+.section1 img {
+    display: block;
+    width: 100%;
+    min-width: 350px;
+    align-self: center;
+    flex: 3;
+}
+
+.section1 div {
+    display: block;
+    width: 100%;
+    min-width: 350px;
+    align-self: center;
+    flex: 2;
+}
+
+.section1 h2{
+    text-align: left;
+}
+
+.section2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    text-align: center; /* Ensures text aligns properly */
+    padding: 30px;
+    gap: 20px; /* Adds spacing */
+}
+
+.button {
+    display: inline-block; /* Ensure it takes space */
+    width: fit-content;
+    margin: 15px auto;
+    font-size: 1.125rem;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    transition: all .2s ease-in-out; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.bg-blue {
+    background: #7796F2;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 20px;
+    display: inline-block; /* Fix display issues */
+}
+
+.bg-blue:hover {
+    background: #ffffff;
+    color: #7796F2;
+    transform: scale(1.1);
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 15px;
 }
 
 /* Team Section */
@@ -161,9 +404,17 @@ h2 {
 }
 
 .team-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.team-section h3 {
+    text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+
 
 @keyframes scrollCarousel {
     from { transform: translateX(0); }
@@ -211,4 +462,95 @@ h2 {
 /* Ensure Zoom Works on Click */
 .team-card {
     transition: transform 0.3s ease-in-out;
+}
+
+/* Registration Card */
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.registration-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensures buttons stay centered */
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    text-align: center; /* Ensures text remains centered */
+}
+
+.registration-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-decoration: none;
+    color: #000000;
+}
+
+.registration-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(59, 95, 255, 0.3);
+}
+
+.registration {
+    text-align: center; /* Ensures the entire section remains centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.registration p {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 700px;
+    text-align: center;
+    margin: 10px auto 30px; /* Centers and adds space below */
+}
+
+
+.registration h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3B5FFF;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Ensure Mobile Responsiveness */
+@media (max-width: 768px) {
+    .registration-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .registration-card {
+        width: 90%;
+    }
+    footer {
+        font-size: 0.8rem; /* Even smaller on mobile */
+        padding: 8px 0; /* Reduce padding */
+        font-size: 0.8rem
+    }
+
+    .fancy-heading {
+        font-size: 2.5rem; /* Slightly smaller for smaller screens */
+    }
 }

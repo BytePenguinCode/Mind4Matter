@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!--favicon-->
-        <link rel="icon" href="assets/Mind4Matter%20Logo.png" type="image/png">
+        <link rel="icon" href="assets/Mind4Matter%20Logo.png?" type="image/png">
 
         <!--open graph data-->
         <meta name="og:title" content="Mind4Matter">
@@ -28,36 +28,46 @@
         <meta property = "twitter:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
     </head>
     <body>
-        <!--navbar-->
-        <nav>
-            <div class="max-size">
+
+    <!-- Navbar -->
+    <nav>
+        <div class="max-size">
+            <!-- Logo + Title -->
+            <div class="nav-logo">
+                <img src="assets/Mind4Matter logo no background.png" alt="Mind4Matter Logo">
                 <h1>
                     <a href="index.html" title="Home page">
                         Mind<span class="blue">4</span>Matter
                     </a>
                 </h1>
-                <ul>
-                    <li>
-                        <a href="index.html" title="Home page">Home</a>
-                    </li>
-                    <li>
-                        <a href="team.html" title="More about our team">Our Team</a>
-                    </li>
-                    <li>
-                        <a href="registration.html" title="Join us today!">Registration</a>
-                    </li>
-                </ul>
             </div>
-        </nav>
+
+            <!-- Hamburger Menu (for Mobile) -->
+            <button class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul id="nav-menu">
+                <li><a href="index.html" title="Home page">Home</a></li>
+                <li><a href="team.html" title="More about our team">Our Team</a></li>
+                <li><a href="registration.html" title="Join us today!">Registration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
         <!--main content-->
         <main>
             <!--section 1-->
             <div class="bg-white">
                 <div class="section1">
                     <div>
-                        <h2>
-                            <span class="darkest-blue">Supporting</span> mental health
-                        </h2>
+                        <h2 class="fancy-heading">
+                            <span>Supporting</span><br>Mental Health
+                        </h2>                        
                         <p>
                             Our mission is to improve the mental health of children and young people 
                             by providing accessible resources, compassionate support, and educational 
@@ -74,25 +84,23 @@
             <!--section 2-->
             <div class="bg-darkest-blue">
                 <div class="section2">
-                    <div>
+                    <!-- Register Now Section (Spans Full Width) -->
+                    <div style="width: 100%; text-align: center;">
                         <h2 class="white">Join us today!</h2>
-                        <a href="registration.html">
-                            <div class="bg-blue white button">Register now</div>
-                        </a>
+                        <a href="registration.html" class="bg-blue white button">Register now</a>
                     </div>
+            
+                    <!-- Connect with Us Section -->
                     <div>
                         <h2 class="white">Connect with us!</h2>
                         <div class="socials">
-                            <a href="https://www.instagram.com/Mind4Matter.global">
-                                <div class="bg-blue white insta button">Instagram</div>
-                            </a>
-                            <a href="mailto:Mind4Matter.org@gmail.com" method="post">
-                                <div class="bg-blue white button">Email</div>
-                            </a>
+                            <a href="https://www.instagram.com/Mind4Matter.global" class="bg-blue white insta button">Instagram</a>
+                            <a href="mailto:Mind4Matter.org@gmail.com" class="bg-blue white button">Email</a>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </main>
         <!--footer-->
         <footer>
@@ -104,10 +112,18 @@
                 </div>
                 <div>
                     <p class="credit">
-                        Made with courtesy of <a href="https://www.bytepenguin.com/" title="BytePenguin's website">BytePenguin</a>.
+                        Made with courtesy of <a href="https://www.bytepenguin.com/" title="BytePenguin's website"><u>BytePenguin</u></a>
                     </p>
                 </div>
             </div>
         </footer>
+
+        <script>
+            function toggleMenu() {
+                document.getElementById("nav-menu").classList.toggle("active");
+                document.querySelector(".hamburger").classList.toggle("active");
+            }
+        </script>
+        
     </body>
 </html>

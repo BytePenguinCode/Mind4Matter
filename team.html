@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Favicon -->
-    <link rel="icon" href="assets/Mind4Matter%20Logo.png" type="image/png">
+    <link rel="icon" href="assets/Mind4Matter%20Logo.png?" type="image/png">
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -38,12 +38,25 @@
     <!-- Navbar -->
     <nav>
         <div class="max-size">
-            <h1>
-                <a href="index.html" title="Home page">
-                    Mind<span class="blue">4</span>Matter
-                </a>
-            </h1>
-            <ul>
+            <!-- Logo + Title -->
+            <div class="nav-logo">
+                <img src="assets/Mind4Matter logo no background.png" alt="Mind4Matter Logo">
+                <h1>
+                    <a href="index.html" title="Home page">
+                        Mind<span class="blue">4</span>Matter
+                    </a>
+                </h1>
+            </div>
+
+            <!-- Hamburger Menu (for Mobile) -->
+            <button class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul id="nav-menu">
                 <li><a href="index.html" title="Home page">Home</a></li>
                 <li><a href="team.html" title="More about our team">Our Team</a></li>
                 <li><a href="registration.html" title="Join us today!">Registration</a></li>
@@ -55,7 +68,7 @@
     <main>
         <!-- Team Section -->
         <section class="team-section">
-            <h2>Meet Our Team</h2>
+            <h2 class ="fancy-heading">Meet<br><span>Our Team</span></h2>
             <p>Dedicated individuals working towards better mental health support worldwide.</p>
         </section>
 
@@ -66,7 +79,7 @@
             <div class="team-card">
                 <img src="assets/Santhosh Thyagarajan.jpg" alt="Santhosh Thyagarajan">
                 <h3>Santhosh Thyagarajan</h3>
-                <p>Global Social Media Representative</p>
+                <p>Global Social Media Rep</p>
             </div>
             <div class="team-card">
                 <img src="assets/Shreyas Korlapati.png" alt="Shreyas Korlapati">
@@ -86,22 +99,22 @@
             <div class="team-card">
                 <img src="assets/Abhineeth Duddela.jpg" alt="Abhineeth Duddela">
                 <h3>Abhineeth Duddela</h3>
-                <p>Global Outreach Representative</p>
+                <p>Global Outreach Rep</p>
             </div>
             <div class="team-card">
                 <img src="assets/Aditya Venkatesan.jpg" alt="Aditya Venkatesan">
                 <h3>Aditya Venkatesan</h3>
-                <p>Global Social Media Representative</p>
+                <p>Global Social Media Rep</p>
             </div>
             <div class="team-card">
                 <img src="assets/Aiza Mohammed.jpg" alt="Aiza Mohammed">
                 <h3>Aiza Mohammed</h3>
-                <p>Global Social Media Representative</p>
+                <p>Global Social Media Rep</p>
             </div>
             <div class="team-card">
                 <img src="assets/Ali Ahsan.png" alt="Ali Ahsan">
                 <h3>Ali Ahsan</h3>
-                <p>Global Social Media Representative</p>
+                <p>Global Social Media Rep</p>
             </div>
             <div class="team-card">
                 <img src="assets/Ankit Etikala.png" alt="Ankit Etikala">
@@ -185,12 +198,18 @@
     <footer>
         <div class="max-size">
             <p class="copyright">© 2025 Mind4Matter. All rights reserved.</p>
-            <p class="credit">Made with <a href="https://www.bytepenguin.com/">BytePenguin</a></p>
+            <p class="credit">Made with courtesy of <a href="https://www.bytepenguin.com/">BytePenguin</a></p>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="carousel.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+    </script>
 
 </body>
 </html>
