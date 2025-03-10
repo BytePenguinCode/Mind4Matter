@@ -209,6 +209,9 @@ nav ul li a:hover {
         width: max-content;
         animation: scrollCarousel 60s linear infinite; /* Keep duration fixed */
         white-space: nowrap; /* Prevents wrapping */
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
     }
 
     .team-card {
@@ -391,7 +394,7 @@ h2 {
 .bg-blue:hover {
     background: #ffffff;
     color: #7796F2;
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 .socials {
@@ -453,7 +456,7 @@ h2 {
 
 .carousel-track {
     display: flex;
-    gap: 40px;
+    gap: 15px;
     width: max-content;
     animation: scrollCarousel 90s linear infinite;
     animation-play-state: running;
