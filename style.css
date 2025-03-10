@@ -22,7 +22,7 @@ nav {
 .max-size {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 15px;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
