@@ -1,65 +1,185 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <!-- meta -->
-        <meta charset="utf-8">
-        <title>Mind4Matter - Our Team</title>
-        <meta name="author" content="Mind4Matter">
-        <meta name="description" content="A global youth-led non-profit organisation that supports mental health">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <title>Mind4Matter - Our Team</title>
+    <meta name="author" content="Mind4Matter">
+    <meta name="description" content="A global youth-led non-profit organisation that supports mental health">
+    
+    <!-- Viewport for responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/Mind4Matter%20Logo.png" type="image/png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-        <!--css-->
-        <link rel="stylesheet" href="style.css">
+    <!-- Inline CSS for Carousel -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
 
-        <!--Tells the browser to make it the width of the device-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        main {
+            flex-grow: 1;
+        }
 
-        <!--favicon-->
-        <link rel="icon" href="assets/Mind4Matter%20Logo.png" type="image/png">
+    </style>
+</head>
+<body>
 
-        <!--open graph data-->
-        <meta name="og:title" content="Mind4Matter">
-        <meta property = "og:type" content="website">
-        <meta property = "og:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
-        <meta property = "og:url" content="https://mind4matter.vercel.app/team.html">
+    <!-- Navbar -->
+    <nav>
+        <div class="max-size">
+            <h1>
+                <a href="index.html" title="Home page">
+                    Mind<span class="blue">4</span>Matter
+                </a>
+            </h1>
+            <ul>
+                <li><a href="index.html" title="Home page">Home</a></li>
+                <li><a href="team.html" title="More about our team">Our Team</a></li>
+                <li><a href="registration.html" title="Join us today!">Registration</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <!--twitter card-->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Mind4Matter">
-        <meta property = "twitter:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
-    </head>
-    <body>
-        <!--navbar-->
-        <nav>
-            <div class="max-size">
-                <h1>
-                    <a href="index.html" title="Home page">
-                        Mind<span class="blue">4</span>Matter
-                    </a>
-                </h1>
-                <ul>
-                    <li>
-                        <a href="index.html" title="Home page">Home</a>
-                    </li>
-                    <li>
-                        <a href="team.html" title="More about our team">Our Team</a>
-                    </li>
-                    <li>
-                        <a href="registration.html" title="Join us today!">Registration</a>
-                    </li>
-                </ul>
+    <!-- Main Content -->
+    <main>
+        <!-- Team Section -->
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <p>Dedicated individuals working towards better mental health support worldwide.</p>
+        </section>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <div class="carousel-track" id="carousel-track">
+            <!-- Team Member Cards -->
+            <div class="team-card">
+                <img src="assets/Santhosh Thyrajan.jpg" alt="Santhosh Thyrajan">
+                <h3>Santhosh Thyrajan</h3>
+                <p>Founder & CEO</p>
             </div>
-        </nav>
-        <main>
-        </main>
-        <footer>
-            <div class="max-size">
-                <p class="copyright">
-                    © 2025 Mind4Matter. All rights reserved.
-                </p>
-                <p class="credit">
-                    Made with <a href="https://www.bytepenguin.com/" title="BytePenguin's website">BytePenguin</a>
-                </p>
+            <div class="team-card">
+                <img src="assets/Shreyas Korlapati.png" alt="Shreyas Korlapati">
+                <h3>Shreyas Korlapati</h3>
+                <p>Operations Director</p>
             </div>
-        </footer>
-    </body>
+            <div class="team-card">
+                <img src="assets/Srikar Kopanna.jpg" alt="Srikar Kopanna">
+                <h3>Srikar Kopanna</h3>
+                <p>Mental Health Specialist</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Tanuj Wadhuwan.png" alt="Tanuj Wadhuwan">
+                <h3>Tanuj Wadhuwan</h3>
+                <p>Community Outreach</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Abhineeth Duddela.jpg" alt="Abhineeth Duddela">
+                <h3>Abhineeth Duddela</h3>
+                <p>Marketing Director</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Aditya Venkatasan.jpg" alt="Aditya Venkatasan">
+                <h3>Aditya Venkatasan</h3>
+                <p>Design Lead</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Aiza Mohammad.jpg" alt="Aiza Mohammad">
+                <h3>Aiza Mohammad</h3>
+                <p>Content Strategist</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Ali Ahsan.png" alt="Ali Ahsan">
+                <h3>Ali Ahsan</h3>
+                <p>Technology Head</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Ankit Etikala.png" alt="Ankit Etikala">
+                <h3>Ankit Etikala</h3>
+                <p>Outreach Coordinator</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Arjun Subramanian.png" alt="Arjun Subramanian">
+                <h3>Arjun Subramanian</h3>
+                <p>Finance Lead</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Arnav Katewale.jpg" alt="Arnav Katewale">
+                <h3>Arnav Katewale</h3>
+                <p>Volunteer Manager</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Hardik Patel.jpg" alt="Hardik Patel">
+                <h3>Hardik Patel</h3>
+                <p>Social Media Coordinator</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Hrudhai Lothumalla.jpg" alt="Hrudhai Lothumalla">
+                <h3>Hrudhai Lothumalla</h3>
+                <p>Community Engagement</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Jahnavi Kadapam.jpg" alt="Jahnavi Kadapam">
+                <h3>Jahnavi Kadapam</h3>
+                <p>Content Writer</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Kavin Sarvanakumar.jpg" alt="Kavin Sarvanakumar">
+                <h3>Kavin Sarvanakumar</h3>
+                <p>Event Coordinator</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Kria Trumella.jpg" alt="Kria Trumella">
+                <h3>Kria Trumella</h3>
+                <p>Community Relations</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Manaskrithi Sista.jpg" alt="Manaskrithi Sista">
+                <h3>Manaskrithi Sista</h3>
+                <p>Fundraising Manager</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Manvit Aaku.png" alt="Manvit Aaku">
+                <h3>Manvit Aaku</h3>
+                <p>Technology Support</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Sahasra Illundulai.jpg" alt="Sahasra Illundulai">
+                <h3>Sahasra Illundulai</h3>
+                <p>PR Coordinator</p>
+            </div>
+            <div class="team-card">
+                <img src="assets/Sambhav Kurana.jpg" alt="Sambhav Kurana">
+                <h3>Sambhav Kurana</h3>
+                <p>Volunteer Coordinator</p>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <br> <br> <br>
+
+    <!-- Footer -->
+    <footer>
+        <div class="max-size">
+            <p class="copyright">© 2025 Mind4Matter. All rights reserved.</p>
+            <p class="credit">Made with <a href="https://www.bytepenguin.com/">BytePenguin</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="carousel.js"></script>
+
+</body>
 </html>
