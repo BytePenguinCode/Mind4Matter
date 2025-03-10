@@ -30,9 +30,8 @@ nav {
 
 @media (max-width: 768px) {
     .carousel-container {
-        width: 100%;
-        overflow: hidden; /* Ensures the track does not extend beyond the screen */
-        position: relative;
+        padding: 30px 0; /* More space */
+        min-height: 250px; /* Ensure height */
     }
     
     .carousel-track {
