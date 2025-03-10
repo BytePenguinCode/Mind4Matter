@@ -99,6 +99,10 @@ footer {
     background-color: #7796F2;
 }
 
+footer p {
+    margin: 5px;
+}
+
 footer .credit {
     text-align: right;
 }
