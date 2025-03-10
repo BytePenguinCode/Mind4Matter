@@ -29,7 +29,24 @@ nav {
 }
 
 @media (max-width: 768px) {
-    /* add mobile responsiveness */
+    .carousel-track {
+        animation: scrollCarousel 90s linear infinite; /* Slower on mobile */
+    }
+
+    .team-card {
+        width: 180px; /* Reduce card size for mobile */
+        padding: 15px;
+    }
+
+    .team-card img {
+        width: 90px;  /* Reduce image size */
+        height: 90px;
+    }
+
+    /* Optional: Adjust glow effect for mobile */
+    .team-card.active-glow {
+        box-shadow: 0px 0px 8px rgba(59, 95, 255, 0.4) !important;
+    }
 }
 
 a {
@@ -128,128 +145,6 @@ h2 {
     gap: 24px;
 }
 
-.section1 img {
-    display: block;
-    width: 100%;
-    min-width: 350px;
-    align-self: center;
-    flex: 3;
-}
-
-.section1 div {
-    display: block;
-    width: 100%;
-    min-width: 350px;
-    align-self: center;
-    flex: 2;
-}
-
-.section1 h2{
-    text-align: left;
-}
-
-.section2 {
-    max-width: 1200px;
-    padding: 30px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.section2 div {
-    margin: auto;
-    width: 60vw;
-    max-width: 350px;
-    margin: 0;
-}
-
-.section2 form{
-    display: flex;
-}
-
-.section2 .button{
-    width: fit-content;
-    margin: 15px auto;
-    font-size: 1.125rem;
-    padding: 15px;
-    border-radius: 15px;
-    border: none;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    transition: all .2s ease-in-out; 
-    display: flex;
-    align-items: center;
-}
-
-.section2 .insta:hover{
-    background: linear-gradient(to right,#feda75, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100%);
-    color: #ffffff;
-}
-
-.button:hover{
-    transform: scale(1.1);
-    background: #ffffff;
-    color: #7796F2;
-}
-
-
-.socials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 15px;
-}
-
-.fullscreen{
-    /*janky fix to make it fullscreen lol */
-    min-height: 77vh;
-    height: fit-content;
-    display: flex;
-    padding: 30px;
-}
-
-.registration {
-    margin: auto;
-}
-
-.registration-cards {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px;
-    max-width: 1200px;
-    justify-content: center;
-    height: fit-content;
-    gap: 30px;
-}
-
-.registration-card {
-    width: 60vw;
-    max-width: 350px;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-    border: none;
-    border-radius: 15px;
-    transition: all .2s ease-in-out;
-    font-family: "Montserrat", sans-serif;
-    box-shadow: 0 0 15px #13205a;
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.registration-card h3, .registration-card p{
-    font-size: 1.125rem;
-}
-
-.registration-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px #3B5FFF;
-    background-color: #7796F2;
-    color: #ffffff;
-}
-
-
 /* Team Section */
 .team-section {
     text-align: center;
@@ -261,10 +156,9 @@ h2 {
     margin-bottom: 1rem;
 }
 
-
 @keyframes scrollCarousel {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-100%); } /* Prevents infinite extension */
 }
 
 /* Team Card */
@@ -291,24 +185,12 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.team-card h3 {
-    font-size: 1.2rem;
-    margin: 10px 0 5px;
-    font-weight: 700;
-}
-
-.team-card p {
-    font-size: 1rem;
-    color: #555;
-    margin: 0;
-}
-
 .carousel-track {
     display: flex;
     gap: 40px;
     width: max-content;
-    animation: scrollCarousel 80s linear infinite;
-    animation-play-state: running; /* Ensures animation is always running until paused */
+    animation: scrollCarousel 140s linear infinite;
+    animation-play-state: running;
 }
 
 /* Glow Effect on Click */
@@ -321,11 +203,3 @@ h2 {
 .team-card {
     transition: transform 0.3s ease-in-out;
 }
-
-
-
-
-
-
-
-
