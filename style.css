@@ -465,6 +465,7 @@ h2 {
 /* Registration Card */
 .registration-container {
     margin: auto;
+    padding: 30px;
 }
 
 .registration-cards {
@@ -473,6 +474,7 @@ h2 {
     padding: 30px;
     max-width: 1200px;
     justify-content: center;
+    align-items: stretch;
     height: fit-content;
     gap: 30px;
 }
@@ -480,7 +482,6 @@ h2 {
 .registration-card {
     width: 60vw;
     max-width: 350px;
-    align-items: center;
     text-align: center;
     padding: 15px;
     border: none;
