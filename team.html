@@ -16,7 +16,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Inline CSS for Carousel -->
     <style>
         body {
             margin: 0;
@@ -31,11 +30,138 @@
             flex-grow: 1;
         }
 
+        
+
+        @media (max-width: 768px) {
+            ul {
+                flex-direction: column;
+                position: absolute;
+                right: 0;
+                top: 100%;
+                background-color: #fff;
+                width: 200px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+            ul.active {
+                max-height: 300px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        /* Team Section */
+        .team-section {
+            text-align: center;
+
+        }
+        .team-section h2 {
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+        .team-section span {
+            color: #29a8da;
+        }
+        .team-section p {
+            margin-bottom: 20px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Carousel Containers */
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            width: max-content;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        /* Alternating directions */
+        .scroll-left {
+            animation-name: scroll-left;
+        }
+        .scroll-right {
+            animation-name: scroll-right;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Team Cards */
+        .team-card {
+            width: 200px;
+            min-height: 250px; /* enough space for circle image + text */
+            flex: 0 0 auto;
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .team-card img {
+            /* Make images circular, 1:1 aspect ratio */
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 15px;
+        }
+        .team-card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.1em;
+        }
+        .team-card p {
+        font-size: 0.9em;
+        max-width: 90%;
+        margin: 0 auto;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 22px;
+    }
+        .team-card.active-glow {
+            box-shadow: 0 0 10px 5px #00f0ff;
+        }
+
+        .max-size {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- Navbar (original header) -->
     <nav>
         <div class="max-size">
             <!-- Logo + Title -->
@@ -66,158 +192,209 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Team Section -->
+        <!-- Board Of Directors -->
         <section class="team-section">
-            <h2 class ="fancy-heading">Meet<br><span>Our Team</span></h2>
-            <p>Dedicated individuals working towards better mental health support worldwide.</p>
+            <h2 class="fancy-heading">Board of <span>Directors</span></h2>
+            <p>The guiding leadership at Mind4Matter</p>
+            <div class="carousel-container">
+                <div class="carousel-track scroll-left" id="carousel-track-1">
+                    <div class="team-card">
+                        <img src="assets/Arjun Subramanian.png" alt="Arjun Subramanian">
+                        <h3>Arjun Subramanian</h3>
+                        <p>Founder & President</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Tanuj Wadhuwan.png" alt="Tanuj Wadhuwan">
+                        <h3>Tanuj Wadhuwan</h3>
+                        <p>Co-Founder & Vice President</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Shreyas Korlapati.png" alt="Shreyas Korlapati">
+                        <h3>Shreyas Korlapati</h3>
+                        <p>Co-Founder & Secretary</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Ankit Etikala.png" alt="Ankit Etikala">
+                        <h3>Ankit Etikala</h3>
+                        <p>Co-Founder & Treasurer</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-    <!-- Carousel -->
-    <div class="carousel-container">
-        <div class="carousel-track" id="carousel-track">
-            <!-- Team Member Cards -->
-            <div class="team-card">
-                <img src="assets/Santhosh Thyagarajan.jpg" alt="Santhosh Thyagarajan">
-                <h3>Santhosh Thyagarajan</h3>
-                <p>Global Social Media Rep</p>
+        <!-- Global Head Ambassadors -->
+        <section class="team-section">
+            <h2 class="fancy-heading">Global Head <span>Ambassadors</span></h2>
+            <p>Reaching out and connecting communities worldwide</p>
+            <div class="carousel-container">
+                <div class="carousel-track scroll-right" id="carousel-track-2">
+                    <div class="team-card">
+                        <img src="assets/Hrudhai Lothumalla.jpg" alt="Hrudhai Lothumalla">
+                        <h3>Hrudhai Lothumalla</h3>
+                        <p>Global Head Ambassador</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Arnav Katewale.jpg" alt="Arnav Katewale">
+                        <h3>Arnav Katewale</h3>
+                        <p>Global Head Ambassador</p>
+                    </div>
+                </div>
             </div>
-            <div class="team-card">
-                <img src="assets/Shreyas Korlapati.png" alt="Shreyas Korlapati">
-                <h3>Shreyas Korlapati</h3>
-                <p>Co-Founder & Secretary</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Srikar Kopanna.jpg" alt="Srikar Nagasai Kopanna">
-                <h3>Srikar Nagasai Kopanna</h3>
-                <p>Chapter Head Council</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Tanuj Wadhuwan.png" alt="Tanuj Wadhuwan">
-                <h3>Tanuj Wadhuwan</h3>
-                <p>Co-Founder & Vice President</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Abhineeth Duddela.jpg" alt="Abhineeth Duddela">
-                <h3>Abhineeth Duddela</h3>
-                <p>Global Outreach Rep</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Aditya Venkatesan.jpg" alt="Aditya Venkatesan">
-                <h3>Aditya Venkatesan</h3>
-                <p>Global Social Media Rep</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Aiza Mohammed.jpg" alt="Aiza Mohammed">
-                <h3>Aiza Mohammed</h3>
-                <p>Global Social Media Rep</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Ali Ahsan.png" alt="Ali Ahsan">
-                <h3>Ali Ahsan</h3>
-                <p>Global Social Media Rep</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Ankit Etikala.png" alt="Ankit Etikala">
-                <h3>Ankit Etikala</h3>
-                <p>Co-Founder & Treasurer</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Arjun Subramanian.png" alt="Arjun Subramanian">
-                <h3>Arjun Subramanian</h3>
-                <p>Founder & President</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Arnav Katewale.jpg" alt="Arnav Katewale">
-                <h3>Arnav Katewale</h3>
-                <p>Global Head Ambassador</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Hardik Patel.jpg" alt="Hardik Patel">
-                <h3>Hardik Patel</h3>
-                <p>Volunteer/Member Team Lead</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Hrudhai Lothumalla.jpg" alt="Hrudhai Lothumalla">
-                <h3>Hrudhai Lothumalla</h3>
-                <p>Global Head Ambassador</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Jahnavi Kapadam.jpg" alt="Jahnavi Kapadam">
-                <h3>Jahnavi Kapadam</h3>
-                <p>Global Outreach Rep</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Kavin Sarvanakumar.jpg" alt="Kavin Sarvanakumar">
-                <h3>Kavin Sarvanakumar</h3>
-                <p>Global Outreach Rep</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Kria Turimella.jpg" alt="Kria Turimella">
-                <h3>Kria Turimella</h3>
-                <p>Photographer</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Manaskriti Sista.jpg" alt="Manaskriti Sista">
-                <h3>Manaskriti Sista</h3>
-                <p>Global Outreach Rep</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Manvit Aaku.png" alt="Manvit Aaku">
-                <h3>Manvit Aaku</h3>
-                <p>Global Social Media Rep</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Sahasra Illundali.jpg" alt="Sahasra Illundali">
-                <h3>Sahasra Illundali</h3>
-                <p>Global Outreach Rep</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Sambhav Khurana.jpg" alt="Sambhav Khurana">
-                <h3>Sambhav Khurana</h3>
-                <p>Chapter Head Council</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Dillon Mathew.jpg" alt="Dillon Mathew">
-                <h3>Dillon Mathew</h3>
-                <p>Volunteer/Member Team Lead</p>
-            </div>
-            <div class="team-card">
-                <img src="assets/Avaneesh Yarkala.png" alt="Avaneesh Yarkala">
-                <h3>Avaneesh Yarkala</h3>
-                <p>Chapter Head Council</p>
-            </div>
-        </div>
-    </div>
+        </section>
 
+        <!-- Chapter Head Council -->
+        <section class="team-section">
+            <h2 class="fancy-heading">Chapter Head <span>Council</span></h2>
+            <p>Local leadership ensuring strong regional outreach</p>
+            <div class="carousel-container">
+                <div class="carousel-track scroll-left" id="carousel-track-3">
+                    <div class="team-card">
+                        <img src="assets/Avaneesh Yarkala.png" alt="Avaneesh Yarkala">
+                        <h3>Avaneesh Yarkala</h3>
+                        <p>Chapter Head Council</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Srikar Kopanna.jpg" alt="Srikar Nagasai Kopanna">
+                        <h3>Srikar Nagasai Kopanna</h3>
+                        <p>Chapter Head Council</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Sambhav Khurana.jpg" alt="Sambhav Khurana">
+                        <h3>Sambhav Khurana</h3>
+                        <p>Chapter Head Council</p>
+                    </div>
+                    <div class="team-card">
+                        <!-- Nithilan Karthik image (assumes .jpg) -->
+                        <img src="assets/Nithilan Karthik.jpg" alt="Nithilan Karthik">
+                        <h3>Nithilan Karthik</h3>
+                        <p>Chapter Head Council</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Social Media Representatives -->
+        <section class="team-section">
+            <h2 class="fancy-heading">Global Social Media <span>Representatives</span></h2>
+            <p>Amplifying Mind4Matter's message across social platforms</p>
+            <div class="carousel-container">
+                <div class="carousel-track scroll-right" id="carousel-track-4">
+                    <div class="team-card">
+                        <img src="assets/Manvit Aaku.png" alt="Manvit Aaku">
+                        <h3>Manvit Aaku</h3>
+                        <p>Global Social Media Rep</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Santhosh Thyagarajan.jpg" alt="Santhosh Thyagarajan">
+                        <h3>Santhosh Thyagarajan</h3>
+                        <p>Global Social Media Rep</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Aditya Venkatesan.jpg" alt="Aditya Venkatesan">
+                        <h3>Aditya Venkatesan</h3>
+                        <p>Global Social Media Rep</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Aiza Mohammed.jpg" alt="Aiza Mohammed">
+                        <h3>Aiza Mohammed</h3>
+                        <p>Global Social Media Rep</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Ali Ahsan.png" alt="Ali Ahsan">
+                        <h3>Ali Ahsan</h3>
+                        <p>Global Social Media Rep</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Outreach Representatives -->
+        <section class="team-section">
+            <h2 class="fancy-heading">Global Outreach <span>Representatives</span></h2>
+            <p>Engaging with partners, communities, and organizations for collaboration</p>
+            <div class="carousel-container">
+                <div class="carousel-track scroll-left" id="carousel-track-5">
+                    <div class="team-card">
+                        <img src="assets/Abhineeth Duddela.jpg" alt="Abhineeth Duddela">
+                        <h3>Abhineeth Duddela</h3>
+                        <p>Global Outreach Rep</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Sahasra Illundali.jpg" alt="Sahasra Illundali">
+                        <h3>Sahasra Illundali</h3>
+                        <p>Global Outreach Rep</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Manaskriti Sista.jpg" alt="Manaskriti Sista">
+                        <h3>Manaskriti Sista</h3>
+                        <p>Global Outreach Rep</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Kavin Sarvanakumar.jpg" alt="Kavin Sarvanakumar">
+                        <h3>Kavin Sarvanakumar</h3>
+                        <p>Global Outreach Rep</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Jahnavi Kapadam.jpg" alt="Jahnavi Kapadam">
+                        <h3>Jahnavi Kapadam</h3>
+                        <p>Global Outreach Rep</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer/Member Team Leads + Photographer -->
+        <section class="team-section">
+            <h2 class="fancy-heading">Volunteer/Member Team <span>Leads</span></h2>
+            <p>Ensuring smooth coordination and active engagement of members</p>
+            <div class="carousel-container">
+                <div class="carousel-track scroll-right" id="carousel-track-6">
+                    <div class="team-card">
+                        <img src="assets/Hardik Patel.jpg" alt="Hardik Patel">
+                        <h3>Hardik Patel</h3>
+                        <p>Volunteer/Member Team Lead</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Dillon Mathew.jpg" alt="Dillon Mathew">
+                        <h3>Dillon Mathew</h3>
+                        <p>Volunteer/Member Team Lead</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="assets/Kria Turimella.jpg" alt="Kria Turimella">
+                        <h3>Kria Turimella</h3>
+                        <p>Photographer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <br> <br> <br>
+    <br><br><br>
 
-        <!--footer-->
-        <footer>
-            <div class="max-size">
-                <div>
-                    <p class="copyright">
-                        © 2025 Mind4Matter. All rights reserved.
-                    </p>
-                </div>
-                <div>
-                    <p class="copyright">
-                        Made with courtesy of <a href="https://www.bytepenguin.com/" title="BytePenguin's website"><u>BytePenguin</u></a>
-                    </p>
-                </div>
+    <!-- Footer -->
+    <footer>
+        <div class="max-size">
+            <div>
+                <p class="copyright">
+                    © 2025 Mind4Matter. All rights reserved.
+                </p>
             </div>
-        </footer>
+            <div>
+                <p class="copyright">
+                    Made with courtesy of <a href="https://www.bytepenguin.com/" title="BytePenguin's website"><u>BytePenguin</u></a>
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <!-- JavaScript -->
-    <script src="carousel.js"></script>
     <script>
         function toggleMenu() {
             document.getElementById("nav-menu").classList.toggle("active");
             document.querySelector(".hamburger").classList.toggle("active");
         }
     </script>
-
+    <script src="carousel.js"></script>
 </body>
 </html>

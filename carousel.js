@@ -1,62 +1,61 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const track = document.getElementById('carousel-track');
+    const tracks = document.querySelectorAll('.carousel-track');
     let lastGlowingCard = null;
-    let animationPaused = false;
 
-    function duplicateSlides() {
-        if (track.dataset.duplicated) return; // Prevents multiple duplications
-        track.dataset.duplicated = "true";
+    tracks.forEach(track => {
+        // If not duplicated yet, add extra copies to fill space
+        if (!track.dataset.duplicated) {
+            track.dataset.duplicated = "true";
 
-        const cards = Array.from(document.querySelectorAll('.team-card'));
-        cards.forEach(card => {
-            let clone = card.cloneNode(true);
-            track.appendChild(clone);
+            const cards = Array.from(track.querySelectorAll('.team-card'));
+            // Duplicate multiple times so short carousels (like 2 members) don’t leave empty space
+            const numberOfDuplicates = 3; 
+            for (let i = 0; i < numberOfDuplicates; i++) {
+                cards.forEach(card => {
+                    let clone = card.cloneNode(true);
+                    track.appendChild(clone);
+                });
+            }
+        }
+
+        // Set up event listeners for pausing/resuming on click
+        track.querySelectorAll('.team-card').forEach(card => {
+            card.addEventListener("click", function (event) {
+                event.stopPropagation();
+
+                // Pause this carousel
+                track.style.animationPlayState = "paused";
+
+                // Remove glow from previously clicked card if it's different
+                if (lastGlowingCard && lastGlowingCard !== card) {
+                    lastGlowingCard.classList.remove("active-glow");
+                    lastGlowingCard.style.transform = "scale(1)";
+                }
+
+                // Toggle glow on this card
+                if (card.classList.contains("active-glow")) {
+                    // If it’s already glowing, remove glow and resume
+                    card.classList.remove("active-glow");
+                    card.style.transform = "scale(1)";
+                    lastGlowingCard = null;
+                    track.style.animationPlayState = "running";
+                } else {
+                    // Make this card glow
+                    card.classList.add("active-glow");
+                    card.style.transform = "scale(1.1)";
+                    lastGlowingCard = card;
+                }
+            });
         });
-    }
 
-    // Clone elements once to create infinite effect
-    duplicateSlides();
-
-    function pauseCarousel() {
-        track.style.animationPlayState = "paused";
-        animationPaused = true;
-    }
-
-    function resumeCarousel() {
-        track.style.animationPlayState = "running";
-        animationPaused = false;
-    }
-
-    document.querySelectorAll('.team-card').forEach(card => {
-        card.addEventListener("click", function (event) {
-            event.stopPropagation();
-
-            pauseCarousel();
-
-            if (lastGlowingCard && lastGlowingCard !== card) {
+        // Clicking anywhere else in document removes glow and resumes
+        document.addEventListener("click", function () {
+            if (lastGlowingCard) {
                 lastGlowingCard.classList.remove("active-glow");
                 lastGlowingCard.style.transform = "scale(1)";
-            }
-
-            if (card.classList.contains("active-glow")) {
-                card.classList.remove("active-glow");
-                card.style.transform = "scale(1)";
                 lastGlowingCard = null;
-                resumeCarousel();
-            } else {
-                card.classList.add("active-glow");
-                card.style.transform = "scale(1.1)";
-                lastGlowingCard = card;
+                track.style.animationPlayState = "running";
             }
         });
-    });
-
-    document.addEventListener("click", function () {
-        if (lastGlowingCard) {
-            lastGlowingCard.classList.remove("active-glow");
-            lastGlowingCard.style.transform = "scale(1)";
-            lastGlowingCard = null;
-            resumeCarousel();
-        }
     });
 });
