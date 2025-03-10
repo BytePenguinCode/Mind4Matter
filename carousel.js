@@ -17,27 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clone elements once to create infinite effect
     duplicateSlides();
 
-    // Ensure animation only runs once and doesn’t reset incorrectly
-    track.addEventListener('animationiteration', () => {
-        if (!animationPaused) {
-            track.style.animation = "none";
-            void track.offsetWidth; // Force reflow
-            track.style.animation = "scrollCarousel 60s linear infinite";
-        }
-    });
-
     function pauseCarousel() {
-        if (!animationPaused) {
-            track.style.animationPlayState = "paused";
-            animationPaused = true;
-        }
+        track.style.animationPlayState = "paused";
+        animationPaused = true;
     }
 
     function resumeCarousel() {
-        if (animationPaused) {
-            track.style.animationPlayState = "running";
-            animationPaused = false;
-        }
+        track.style.animationPlayState = "running";
+        animationPaused = false;
     }
 
     document.querySelectorAll('.team-card').forEach(card => {

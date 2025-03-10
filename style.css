@@ -29,8 +29,18 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+        overflow: hidden; /* Ensures the track does not extend beyond the screen */
+        position: relative;
+    }
+    
     .carousel-track {
-        animation: scrollCarousel 90s linear infinite; /* Slower on mobile */
+        display: flex;
+        gap: 40px;
+        width: max-content;
+        animation: scrollCarousel 60s linear infinite; /* Keep duration fixed */
+        white-space: nowrap; /* Prevents wrapping */
     }
 
     .team-card {
@@ -158,7 +168,7 @@ h2 {
 
 @keyframes scrollCarousel {
     from { transform: translateX(0); }
-    to { transform: translateX(-100%); } /* Prevents infinite extension */
+    to { transform: translateX(-50%); } 
 }
 
 /* Team Card */
@@ -189,7 +199,7 @@ h2 {
     display: flex;
     gap: 40px;
     width: max-content;
-    animation: scrollCarousel 140s linear infinite;
+    animation: scrollCarousel 90s linear infinite;
     animation-play-state: running;
 }
 
