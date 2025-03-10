@@ -212,7 +212,8 @@ nav ul li a:hover {
     }
 
     .team-card {
-        width: 180px; /* Reduce card size for mobile */
+        min-width: 180px; /* Reduce card size for mobile */
+        width: fit-content;
         padding: 15px;
         box-shadow: 0 0 15px #13205a;
         background-color: #ffffff;
@@ -427,7 +428,8 @@ h2 {
 /* Team Card */
 .team-card {
     flex: 0 0 auto;
-    width: 250px;
+    min-width: 250px;
+    width: fit-content;
     background: #ffffff;
     border-radius: 15px;
     text-align: center;
