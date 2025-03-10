@@ -164,7 +164,8 @@ h2 {
     display: flex;
 }
 
-.section2 button{
+.section2 .button{
+    width: fit-content;
     margin: 15px auto;
     font-size: 1.125rem;
     padding: 15px;
@@ -177,12 +178,12 @@ h2 {
     align-items: center;
 }
 
-.insta:hover{
+.section2 .insta:hover{
     background: linear-gradient(to right,#feda75, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100%);
     color: #ffffff;
 }
 
-button:hover{
+.button:hover{
     transform: scale(1.1);
     background: #ffffff;
     color: #7796F2;
