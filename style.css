@@ -225,7 +225,7 @@ nav ul li a:hover {
     }
 
     .team-card.active-glow {
-        box-shadow: 0 0 30px #3B5FFF !important;
+        box-shadow: 0 0 15px #3B5FFF !important;
         background-color: #7796F2 !important;
         color: #ffffff !important;
     }
@@ -459,7 +459,7 @@ h2 {
 
 /* Glow Effect on Click */
 .team-card.active-glow {
-    box-shadow: 0 0 30px #3B5FFF !important;
+    box-shadow: 0 0 15px #3B5FFF !important;
     background-color: #7796F2 !important;
     color: #ffffff !important;
     transition: all 0.2s ease-in-out;
