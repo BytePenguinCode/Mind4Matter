@@ -289,7 +289,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers content vertically */
-    padding-bottom: 50px;
 }
 
 footer {
