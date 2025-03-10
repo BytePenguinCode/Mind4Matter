@@ -59,15 +59,15 @@ nav h1 *{
 }
 
 .bg-blue {
-    background-color: #7796F2;
+    background: #7796F2;
 }
 
 .bg-darkest-blue{
-    background-color: #3B5FFF;
+    background: #3B5FFF;
 }
 
 .bg-white{
-    background-color: #ffffff;
+    background: #ffffff;
 }
 
 nav ul {
@@ -148,10 +148,16 @@ h2 {
     max-width: 1200px;
     padding: 30px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.section2 > *{
-    margin: 15px;
+.section2 div {
+    margin: auto;
+    width: 60vw;
+    max-width: 350px;
+    margin: 0;
 }
 
 .section2 form{
@@ -159,7 +165,7 @@ h2 {
 }
 
 .section2 button{
-    margin: 0 auto;
+    margin: 15px auto;
     font-size: 1.125rem;
     padding: 15px;
     border-radius: 15px;
@@ -167,12 +173,26 @@ h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     transition: all .2s ease-in-out; 
+    display: flex;
+    align-items: center;
 }
 
-.section2 button:hover{
+.insta:hover{
+    background: linear-gradient(to right,#feda75, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100%);
+    color: #ffffff;
+}
+
+button:hover{
     transform: scale(1.1);
-    background-color: #ffffff;
+    background: #ffffff;
     color: #7796F2;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 15px;
 }
 
 .fullscreen{
