@@ -41,7 +41,7 @@ nav {
 }
 
 /* Navbar Container */
-.max-size {
+.nav-container, .footer-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
