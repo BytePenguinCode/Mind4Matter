@@ -154,7 +154,7 @@ nav ul li a:hover {
 
     /* Rotate effect when menu opens */
     .hamburger.active div:nth-child(1) {
-        transform: rotate(45deg) translateY(7px);
+        transform: translateY(8px) rotate(45deg);
     }
 
     .hamburger.active div:nth-child(2) {
@@ -162,7 +162,7 @@ nav ul li a:hover {
     }
 
     .hamburger.active div:nth-child(3) {
-        transform: rotate(-45deg) translateY(-7px);
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
