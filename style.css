@@ -137,44 +137,6 @@ nav ul li a:hover {
         right: 0;
     }
 
-    /* Rotate effect when menu opens */
-    .hamburger.active div:nth-child(1) {
-        transform: rotate(45deg) translateY(7px);
-    }
-
-    .hamburger.active div:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active div:nth-child(3) {
-        transform: rotate(-45deg) translateY(-7px);
-    }
-}
-
-
-/* Mobile Menu */
-@media (max-width: 768px) {
-    /* Hide default menu */
-    nav ul {
-        position: fixed;
-        top: 0;
-        right: -100%; /* Hide menu off-screen initially */
-        width: 250px;
-        height: 100vh;
-        background-color: #3B5FFF;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-        transition: right 0.3s ease-in-out;
-    }
-
-    /* Active class when menu is open */
-    nav ul.active {
-        right: 0; /* Slide menu into view */
-    }
-
     nav ul li {
         margin: 15px 0;
     }
@@ -212,26 +174,6 @@ nav ul li a:hover {
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-}
-
-.team-card {
-    min-width: 180px; /* Reduce card size for mobile */
-    width: fit-content;
-    padding: 15px;
-    box-shadow: 0 0 15px #13205a;
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.team-card img {
-    width: 90px;  /* Reduce image size */
-    height: 90px;
-}
-
-.team-card.active-glow {
-    box-shadow: 0 0 15px #3B5FFF !important;
-    background-color: #7796F2 !important;
-    color: #ffffff !important;
 }
 
 a {
@@ -387,82 +329,6 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 15px;
-}
-
-/* Team Section */
-.team-section {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.team-section h2 {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.team-section h3 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-
-@keyframes scrollCarousel {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); } 
-}
-
-/* Team Card */
-.team-card {
-    flex: 0 0 auto;
-    min-width: 250px;
-    width: fit-content;
-    background: #ffffff;
-    border-radius: 15px;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 0 15px #13205a;
-    color: #000000;
-}
-
-.team-card:hover {
-    transform: scale(1.05);
-}
-
-.team-card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.team-card h3 {
-    margin: 10px 0 5px;
-    font-size: 1.1em;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 15px;
-    width: max-content;
-    animation: scrollCarousel 30s linear infinite;
-    animation-play-state: running;
-}
-
-/* Glow Effect on Click */
-.team-card.active-glow {
-    box-shadow: 0 0 15px #3B5FFF !important;
-    background-color: #7796F2 !important;
-    color: #ffffff !important;
-    transition: all 0.2s ease-in-out;
-}
-
-/* Ensure Zoom Works on Click */
-.team-card {
-    transition: transform 0.2s ease-in-out;
 }
 
 /* Registration Card */
