@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- Meta Information -->
+        <meta charset="utf-8">
+        <title>Mind4Matter - Registration</title>
+        <meta name="author" content="Mind4Matter">
+        <meta name="description" content="A global youth-led non-profit organisation that supports mental health">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+        
+        <!-- Favicon -->
+        <link rel="icon" href="assets/Mind4Matter%20Logo.png?" type="image/png">
+        
+        <!-- Open Graph Data -->
+        <meta property="og:title" content="Mind4Matter">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
+        <meta property="og:url" content="https://mind4matter.vercel.app/registration.html">
+        
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Mind4Matter">
+        <meta property="twitter:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-container">
+                <!-- Logo + Title -->
+                <div class="nav-logo">
+                    <img src="assets/Mind4Matter logo no background.png" alt="Mind4Matter Logo">
+                    <h1>
+                        <a href="index.html" title="Home page">
+                            Mind<span>4</span>Matter
+                        </a>
+                    </h1>
+                </div>
+
+                <!-- Hamburger Menu (for Mobile) -->
+                <button class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+
+                <!-- Navigation Links -->
+                <ul id="nav-menu">
+                    <li><a href="index.html" title="Home page">Home</a></li>
+                    <li><a href="team.html" title="More about our team">Our Team</a></li>
+                    <li><a href="registration.html" title="Join us today!">Registration</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="white-button">Button</div>
+            <div class="blue-button">Button</div>
+            <div class="dark-blue-button">Button</div>
+        </main>
+        <!--footer-->
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <p class="copyright">
+                        © 2025 Mind4Matter. All rights reserved.
+                    </p>
+                </div>
+                <div>
+                    <p class="copyright">
+                        Made with courtesy of <a href="https://www.bytepenguin.com/" title="BytePenguin's website"><u>BytePenguin</u></a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function toggleMenu() {
+                document.getElementById("nav-menu").classList.toggle("active");
+                document.querySelector(".hamburger").classList.toggle("active");
+            }
+        </script>
+    </body>
+</html>

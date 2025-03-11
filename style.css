@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* root components */
 :root {
     --dark-blue: #3B5FFF;
     --blue: #7796F2;
@@ -164,27 +165,6 @@ nav ul li a:hover {
     }
 }
 
-.carousel-container {
-    padding: 30px 0; /* More space */
-    min-height: 250px; /* Ensure height */
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 40px;
-    width: max-content;
-    animation: scrollCarousel 60s linear infinite; /* Keep duration fixed */
-    white-space: nowrap; /* Prevents wrapping */
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-a {
-    text-decoration: none;
-}
-
 nav h1 {
     margin: auto 0;
 }
@@ -261,6 +241,58 @@ h2 {
     line-height: 1.4;
 }
 
+/*buttons*/
+.blue-button, .white-button, .dark-blue-button {
+    display: flex;
+    width: fit-content;
+    margin: 15px auto;
+    font-size: 1.125rem;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    transition: all .2s ease-in-out; 
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.blue-button {
+    background-color: var(--blue);
+    color: var(--white)
+}
+
+.dark-blue-button {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.white-button {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.blue-button:hover, .white-button:hover, .dark-blue-button:hover{
+    transform: scale(1.1);
+}
+
+.white-button:hover{
+    background-color: var(--blue);
+    color: var(--white)
+}
+
+.blue-button:hover{
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.dark-blue-button:hover{
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+/*photo-paragraph section*/
 .photo-paragraph img {
     display: block;
     width: 100%;
@@ -279,37 +311,6 @@ h2 {
 
 .photo-paragraph h2{
     text-align: left;
-}
-
-.button {
-    display: inline-block; /* Ensure it takes space */
-    width: fit-content;
-    margin: 15px auto;
-    font-size: 1.125rem;
-    padding: 15px;
-    border-radius: 15px;
-    border: none;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    transition: all .2s ease-in-out; 
-    text-align: center;
-    cursor: pointer;
-    background-color: #7796F2;
-    color: #ffffff;
-    transition: all 0.2 ease-in-out;
-}
-
-.button:hover{
-    transform: scale(1.1);
-    background-color: #ffffff;
-    color: #7796F2;
-}
-
-.socials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 15px;
 }
 
 /* Registration Card */
@@ -342,6 +343,7 @@ h2 {
     box-shadow: 0 0 15px #13205a;
     background-color: #ffffff;
     color: #000000;
+    text-decoration: none;
 }
 
 .registration-card h3, .registration-card p{
