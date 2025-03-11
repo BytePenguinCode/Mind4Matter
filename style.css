@@ -197,46 +197,46 @@ nav ul li a:hover {
     }
 }
 
-    .carousel-container {
-        padding: 30px 0; /* More space */
-        min-height: 250px; /* Ensure height */
-        overflow: hidden;
-    }
-    
-    .carousel-track {
-        display: flex;
-        gap: 40px;
-        width: max-content;
-        animation: scrollCarousel 60s linear infinite; /* Keep duration fixed */
-        white-space: nowrap; /* Prevents wrapping */
-        animation-duration: 30s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
+.carousel-container {
+    padding: 30px 0; /* More space */
+    min-height: 250px; /* Ensure height */
+    overflow: hidden;
+}
 
-    .team-card {
-        min-width: 180px; /* Reduce card size for mobile */
-        width: fit-content;
-        padding: 15px;
-        box-shadow: 0 0 15px #13205a;
-        background-color: #ffffff;
-        color: #000000;
-    }
+.carousel-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: scrollCarousel 60s linear infinite; /* Keep duration fixed */
+    white-space: nowrap; /* Prevents wrapping */
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
 
-    .team-card img {
-        width: 90px;  /* Reduce image size */
-        height: 90px;
-    }
+.team-card {
+    min-width: 180px; /* Reduce card size for mobile */
+    width: fit-content;
+    padding: 15px;
+    box-shadow: 0 0 15px #13205a;
+    background-color: #ffffff;
+    color: #000000;
+}
 
-    .team-card.active-glow {
-        box-shadow: 0 0 15px #3B5FFF !important;
-        background-color: #7796F2 !important;
-        color: #ffffff !important;
-    }
-    
-    a {
-        text-decoration: none;
-    }
+.team-card img {
+    width: 90px;  /* Reduce image size */
+    height: 90px;
+}
+
+.team-card.active-glow {
+    box-shadow: 0 0 15px #3B5FFF !important;
+    background-color: #7796F2 !important;
+    color: #ffffff !important;
+}
+
+a {
+    text-decoration: none;
+}
 
 nav h1 {
     margin: auto 0;
