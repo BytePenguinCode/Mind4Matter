@@ -231,21 +231,9 @@ h2 {
     text-align: center;
 }
 
-.photo-paragraph, .container {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 1200px;
-    padding: 30px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    line-height: 1.4;
-}
-
 /*buttons*/
 .blue-button, .white-button, .dark-blue-button {
+    box-sizing: border-box;
     display: flex;
     width: fit-content;
     margin: 15px auto;
@@ -300,6 +288,19 @@ h2 {
 }
 
 /*photo-paragraph section*/
+.photo-paragraph, .container{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    line-height: 1.4;
+}
+
 .photo-paragraph img {
     display: block;
     width: 100%;
@@ -308,7 +309,7 @@ h2 {
     flex: 2;
 }
 
-.photo-paragraph div {
+.photo-paragraph > div {
     display: block;
     width: 100%;
     min-width: 350px;
@@ -320,26 +321,22 @@ h2 {
     text-align: left;
 }
 
-/* Registration Card */
-.registration-container {
-    margin: auto;
-    padding: 30px;
-    text-align: center;
-}
-
-.registration-cards {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px;
+/* paragraph section */
+.paragraph{
+    box-sizing: border-box;
+    width: 100%;
     max-width: 1200px;
-    justify-content: center;
-    align-items: stretch;
-    height: fit-content;
-    gap: 30px;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+    gap: 20px;
+    line-height: 1.4;
 }
 
-.registration-card {
-    width: 60vw;
+/*card */
+.card {
+    box-sizing: border-box;
+    width: 100vw;
     max-width: 350px;
     text-align: center;
     padding: 15px;
@@ -353,11 +350,11 @@ h2 {
     text-decoration: none;
 }
 
-.registration-card h3, .registration-card p{
+.card h3, .card p{
     font-size: 1.125rem;
 }
 
-.registration-card:hover {
+.card:hover {
     transform: scale(1.1);
     box-shadow: 0 0 30px #3B5FFF;
     background-color: #7796F2;
