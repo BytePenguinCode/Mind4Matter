@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+:root {
+    --dark-blue: #3B5FFF;
+    --blue: #7796F2;
+    --white: #ffffff;
+    --black: #000000;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -15,23 +20,23 @@ body {
 
 /* Fancy Heading */
 .fancy-heading {
-    font-size: 2.5rem; /* Make it much bigger */
+    font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
     line-height: 1.2;
     letter-spacing: 1px;
 }
 
-/* Highlight "Supporting" */
+/* Highlight span words */
 .fancy-heading span {
-    color: #3B5FFF; /* Darkest Blue */
+    color: var(--dark-blue);
     font-weight: 800;
     text-shadow: 2px 2px 10px rgba(59, 95, 255, 0.4);
 }
 
 /* Navbar */
 nav {
-    background-color: #3B5FFF;
+    background-color: var(--dark-blue);
     position: sticky;
     top: 0;
     width: 100%;
@@ -65,7 +70,7 @@ nav {
 .nav-logo a {
     font-size: 1.8rem;
     font-weight: 900;
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -79,7 +84,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: var(--white);
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
@@ -87,7 +92,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #7796F2;
+    color: var(--blue);
 }
 
 /* Hamburger Menu (Hidden by Default) */
@@ -105,7 +110,7 @@ nav ul li a:hover {
 .hamburger div {
     width: 30px;
     height: 3px;
-    background-color: #ffffff;
+    background-color: var(--white);
     transition: all 0.3s ease-in-out;
 }
 
@@ -122,7 +127,7 @@ nav ul li a:hover {
         right: -100%;
         width: 250px;
         height: 100vh;
-        background-color: #3B5FFF;
+        background-color: var(--dark-blue);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -187,31 +192,7 @@ nav h1 {
 nav h1 *{
     font-size: 2rem;
     font-weight: 900;
-    color: #ffffff;
-}
-
-.blue{
-    color: #7796F2;
-}
-
-.darkest-blue{
-    color: #3B5FFF;
-}
-
-.white {
-    color: #ffffff;
-}
-
-.bg-blue {
-    background: #7796F2;
-}
-
-.bg-darkest-blue{
-    background: #3B5FFF;
-}
-
-.bg-white{
-    background: #ffffff;
+    color: var(--white);
 }
 
 nav ul {
@@ -226,12 +207,12 @@ nav ul {
 }
 
 nav ul *{
-    color: #ffffff;
+    color: var(--white);
     font-size: 1.125rem;
 }
 
 nav ul *:hover{
-    color: #7796F2;
+    color: var(--blue);
 }
 
 main {
@@ -243,7 +224,7 @@ main {
 
 footer {
     width: 100%;
-    background-color: #7796F2;
+    background-color: var(--blue);
     text-align: center;
     padding: 15px 0;
     margin-top: auto; /* Ensures footer stays at the bottom */
@@ -259,7 +240,7 @@ footer .credit {
 }
 
 footer * {
-    color: #ffffff;
+    color: var(--white);
 }
 
 h2 {
