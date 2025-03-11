@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* root components */
 :root {
+    --shadow: #13205a;
     --dark-blue: #3B5FFF;
     --blue: #7796F2;
     --white: #ffffff;
@@ -256,11 +257,12 @@ h2 {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+    box-shadow: 0 0 15px var(--shadow);
 }
 
 .blue-button {
     background-color: var(--blue);
-    color: var(--white)
+    color: var(--white);
 }
 
 .dark-blue-button {
@@ -279,17 +281,20 @@ h2 {
 
 .white-button:hover{
     background-color: var(--blue);
-    color: var(--white)
+    color: var(--white);
+    box-shadow: 0 0 15px var(--blue);
 }
 
 .blue-button:hover{
     background-color: var(--white);
     color: var(--blue);
+    box-shadow: 0 0 15px var(--white);
 }
 
 .dark-blue-button:hover{
     background-color: var(--white);
     color: var(--dark-blue);
+    box-shadow: 0 0 15px var(--white);
 }
 
 /*photo-paragraph section*/
