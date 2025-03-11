@@ -231,7 +231,9 @@ h2 {
     text-align: center;
 }
 
-.photo-paragraph {
+.photo-paragraph, .container {
+    box-sizing: border-box;
+    width: 100%;
     max-width: 1200px;
     padding: 30px;
     margin: 0 auto;
@@ -303,7 +305,7 @@ h2 {
     width: 100%;
     min-width: 350px;
     align-self: center;
-    flex: 3;
+    flex: 2;
 }
 
 .photo-paragraph div {
@@ -311,7 +313,7 @@ h2 {
     width: 100%;
     min-width: 350px;
     align-self: center;
-    flex: 2;
+    flex: 3;
 }
 
 .photo-paragraph h2{
