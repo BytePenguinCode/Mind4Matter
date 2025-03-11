@@ -322,7 +322,7 @@ h2 {
 }
 
 /* paragraph section */
-.paragraph{
+.paragraph, .image{
     box-sizing: border-box;
     width: 100%;
     max-width: 1200px;
@@ -331,6 +331,15 @@ h2 {
     text-align: center;
     gap: 20px;
     line-height: 1.4;
+}
+
+/* image section */
+img{
+    max-height:800px;
+    max-width:800px;
+    width: 80vw;
+    height: auto;
+    object-fit: contain;
 }
 
 /*card */
