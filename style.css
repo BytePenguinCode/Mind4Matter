@@ -329,12 +329,11 @@ h2 {
     padding: 15px;
     margin: 0 auto;
     text-align: center;
-    gap: 20px;
     line-height: 1.4;
 }
 
 /* image section */
-img{
+.image img{
     max-height:600px;
     max-width:800px;
     width: 80vw;
