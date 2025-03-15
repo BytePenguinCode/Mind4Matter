@@ -225,7 +225,7 @@ footer * {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0;
     text-align: center;
@@ -342,7 +342,7 @@ h2 {
 }
 
 /*card */
-.card {
+.small-card {
     box-sizing: border-box;
     width: 100vw;
     max-width: 350px;
@@ -358,13 +358,46 @@ h2 {
     text-decoration: none;
 }
 
-.card h3, .card p{
+.small-card h3, .small-card p{
     font-size: 1.125rem;
 }
 
-.card:hover {
+.small-card:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 30px #3B5FFF;
+    box-shadow: 0 0 30px #3b5fff;
     background-color: #7796F2;
     color: #ffffff;
+}
+
+/* section */
+.big-section-center, .section {
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(32, 48, 121, 0.5);
+    background-blend-mode: multiply;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.big-section-center > div, .section > div {
+    max-width: 1200px;
+}
+.big-section-center h2, .section h2{
+    font-size: 3rem;
+}
+
+.big-section-center {
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.section {
+    min-height: 50vh;
+    height: fit-content;
 }
