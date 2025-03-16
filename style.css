@@ -342,10 +342,9 @@ h2 {
 }
 
 /*card */
-.white-small-card, .white-small-card-clickable, .blue-small-card, .blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
+.small-card, .white-small-card, .white-small-card-clickable, .blue-small-card, .blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
     box-sizing: border-box;
     width: 100vw;
-    max-width: 350px;
     text-align: center;
     padding: 15px;
     border: none;
@@ -355,6 +354,9 @@ h2 {
     box-shadow: 0 0 15px #13205a;
     text-decoration: none;
     font-size: 1.125rem;
+}
+.small-card, .white-small-card, .white-small-card-clickable, .blue-small-card, .blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
+    max-width: 350px;
 }
 
 .white-small-card, .white-small-card-clickable {
