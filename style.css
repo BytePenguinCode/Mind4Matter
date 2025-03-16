@@ -342,7 +342,7 @@ h2 {
 }
 
 /*card */
-.small-card {
+.white-small-card, .white-small-card-clickable, .blue-small-card, .blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
     box-sizing: border-box;
     width: 100vw;
     max-width: 350px;
@@ -353,20 +353,45 @@ h2 {
     transition: all .2s ease-in-out;
     font-family: "Montserrat", sans-serif;
     box-shadow: 0 0 15px #13205a;
-    background-color: #ffffff;
-    color: #000000;
     text-decoration: none;
-}
-
-.small-card h3, .small-card p{
     font-size: 1.125rem;
 }
 
-.small-card:hover {
+.white-small-card, .white-small-card-clickable {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.blue-small-card, .blue-small-card-clickable {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.dark-blue-small-card, .dark-blue-small-card-clickable {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.white-small-card-clickable:hover, .blue-small-card-clickable:hover, .dark-blue-small-card-clickable:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 30px #3b5fff;
-    background-color: #7796F2;
-    color: #ffffff;
+}
+
+.white-small-card-clickable:hover{
+    box-shadow: 0 0 30px var(--blue);
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.blue-small-card-clickable:hover{
+    box-shadow: 0 0 30px var(--white);
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.dark-blue-small-card-clickable:hover{
+    box-shadow: 0 0 30px var(--white);
+    background-color: var(--white);
+    color: var(--dark-blue);
 }
 
 /* section */
