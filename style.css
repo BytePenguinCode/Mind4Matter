@@ -322,14 +322,25 @@ h2 {
 }
 
 /* paragraph section */
-.paragraph, .image{
+.center-paragraph,.paragraph, .image{
     box-sizing: border-box;
     width: 100%;
     max-width: 1200px;
     padding: 15px;
     margin: 0 auto;
-    text-align: center;
     line-height: 1.4;
+}
+
+.center-paragraph, .image{
+    text-align: center;
+}
+
+.paragraph{
+    text-align: left;
+}
+
+.paragraph h2{
+    text-align: left;
 }
 
 /* image section */
@@ -342,7 +353,8 @@ h2 {
 }
 
 /*card */
-.small-card, .white-small-card, .white-small-card-clickable, .blue-small-card, .blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
+.small-card, .white-small-card, .white-small-card-clickable, .blue-small-card, 
+.blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
     box-sizing: border-box;
     width: 100vw;
     text-align: center;
@@ -351,30 +363,38 @@ h2 {
     border-radius: 15px;
     transition: all .2s ease-in-out;
     font-family: "Montserrat", sans-serif;
-    box-shadow: 0 0 15px #13205a;
     text-decoration: none;
     font-size: 1.125rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(32, 48, 121, 0.5);
+    background-blend-mode: multiply;
 }
-.small-card, .white-small-card, .white-small-card-clickable, .blue-small-card, .blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
+.small-card, .white-small-card, .white-small-card-clickable, .blue-small-card, 
+.blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
     max-width: 350px;
 }
 
 .white-small-card, .white-small-card-clickable {
     background-color: var(--white);
     color: var(--black);
+    box-shadow: 0 0 15px #13205a;
 }
 
 .blue-small-card, .blue-small-card-clickable {
     background-color: var(--blue);
     color: var(--white);
+    box-shadow: 0 0 15px #13205a;
 }
 
 .dark-blue-small-card, .dark-blue-small-card-clickable {
     background-color: var(--dark-blue);
     color: var(--white);
+    box-shadow: 0 0 15px #13205a;
 }
 
-.white-small-card-clickable:hover, .blue-small-card-clickable:hover, .dark-blue-small-card-clickable:hover {
+.small-card-clickable:hover, .white-small-card-clickable:hover, .blue-small-card-clickable:hover, .dark-blue-small-card-clickable:hover {
     transform: scale(1.1);
 }
 
