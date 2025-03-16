@@ -370,29 +370,48 @@ h2 {
 }
 
 /* section */
-.big-section-center, .section {
+.big-section-center, .section, .big-section-bottom {
     box-sizing: border-box;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: rgba(32, 48, 121, 0.5);
     background-blend-mode: multiply;
-    text-align: center;
     font-size: 1.5rem;
 }
-.big-section-center > div, .section > div {
+
+.big-section-bottom {
+    justify-content: end;
+    align-items: center;
+}
+
+.big-section-bottom *{
+    text-align: left;
+}
+
+.big-section-center, .section {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.big-section-center > div, .section > div, .big-section-bottom > div{
     max-width: 1200px;
 }
-.big-section-center h2, .section h2{
+
+.big-section-bottom > div {
+    align-items: normal;
+    width: 100%;
+}
+
+.big-section-center h2, .section h2, .big-section-bottom h2{
     font-size: 3rem;
 }
 
-.big-section-center {
+.big-section-center, .big-section-bottom {
     min-height: 100vh;
     height: fit-content;
 }
