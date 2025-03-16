@@ -307,6 +307,7 @@ h2 {
     min-width: 350px;
     align-self: center;
     flex: 2;
+    border-radius: 15px;
 }
 
 .photo-paragraph > div {
@@ -353,7 +354,7 @@ h2 {
 }
 
 /*card */
-.card, .white-card, .white-card-clickable, .blue-card, 
+.white-card, .white-card-clickable, .blue-card, 
 .blue-card-clickable, .dark-card, .dark-blue-card-clickable {
     box-sizing: border-box;
     width: 100vw;
@@ -365,15 +366,18 @@ h2 {
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
     font-size: 1.125rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(32, 48, 121, 0.5);
-    background-blend-mode: multiply;
-}
-.card, .white-card, .white-card-clickable, .blue-card, 
-.blue-card-clickable, .dark-blue-card, .dark-blue-card-clickable {
     max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-card img, .white-card-clickable img, .blue-card img, 
+.blue-card-clickable img, .dark-card img, .dark-blue-card-clickable img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .white-card, .white-card-clickable {
