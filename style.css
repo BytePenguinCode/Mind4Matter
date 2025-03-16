@@ -353,8 +353,8 @@ h2 {
 }
 
 /*card */
-.small-card, .white-small-card, .white-small-card-clickable, .blue-small-card, 
-.blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
+.card, .white-card, .white-card-clickable, .blue-card, 
+.blue-card-clickable, .dark-card, .dark-blue-card-clickable {
     box-sizing: border-box;
     width: 100vw;
     text-align: center;
@@ -371,46 +371,46 @@ h2 {
     background-color: rgba(32, 48, 121, 0.5);
     background-blend-mode: multiply;
 }
-.small-card, .white-small-card, .white-small-card-clickable, .blue-small-card, 
-.blue-small-card-clickable, .dark-blue-small-card, .dark-blue-small-card-clickable {
+.card, .white-card, .white-card-clickable, .blue-card, 
+.blue-card-clickable, .dark-blue-card, .dark-blue-card-clickable {
     max-width: 350px;
 }
 
-.white-small-card, .white-small-card-clickable {
+.white-card, .white-card-clickable {
     background-color: var(--white);
     color: var(--black);
     box-shadow: 0 0 15px #13205a;
 }
 
-.blue-small-card, .blue-small-card-clickable {
+.blue-card, .blue-card-clickable {
     background-color: var(--blue);
     color: var(--white);
     box-shadow: 0 0 15px #13205a;
 }
 
-.dark-blue-small-card, .dark-blue-small-card-clickable {
+.dark-blue-card, .dark-blue-card-clickable {
     background-color: var(--dark-blue);
     color: var(--white);
     box-shadow: 0 0 15px #13205a;
 }
 
-.small-card-clickable:hover, .white-small-card-clickable:hover, .blue-small-card-clickable:hover, .dark-blue-small-card-clickable:hover {
+.card-clickable:hover, .white-card-clickable:hover, .blue-card-clickable:hover, .dark-blue-card-clickable:hover {
     transform: scale(1.1);
 }
 
-.white-small-card-clickable:hover{
+.white-card-clickable:hover{
     box-shadow: 0 0 30px var(--blue);
     background-color: var(--blue);
     color: var(--white);
 }
 
-.blue-small-card-clickable:hover{
+.blue-card-clickable:hover{
     box-shadow: 0 0 30px var(--white);
     background-color: var(--white);
     color: var(--blue);
 }
 
-.dark-blue-small-card-clickable:hover{
+.dark-blue-card-clickable:hover{
     box-shadow: 0 0 30px var(--white);
     background-color: var(--white);
     color: var(--dark-blue);
