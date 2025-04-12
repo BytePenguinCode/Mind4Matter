@@ -472,3 +472,25 @@ h2 {
     min-height: 50vh;
     height: fit-content;
 }
+
+.photo-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-gallery div {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo-gallery img {
+    display: block;
+    height: 270px;
+    align-self: center;
+    border-radius: 15px;
+    margin: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
