@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- meta -->
+        <meta charset="utf-8">
+        <title>Mind4Matter - Events</title>
+        <meta name="author" content="Mind4Matter">
+        <meta name="description" content="A global youth-led non-profit organisation that supports mental health">
+
+        <!--css-->
+        <link rel="stylesheet" href="style.css">
+
+        <!--Tells the browser to make it the width of the device-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--favicon-->
+        <link rel="icon" href="assets/Mind4Matter%20Logo.png?" type="image/png">
+
+        <!--open graph data-->
+        <meta name="og:title" content="Mind4Matter">
+        <meta property = "og:type" content="website">
+        <meta property = "og:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
+        <meta property = "og:url" content="https://mind4matter.vercel.app/events.html">
+
+        <!--twitter card-->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Mind4Matter">
+        <meta property = "twitter:image" content="https://mind4matter.vercel.app/assets/Mind4Matter%20Logo.png">
+    </head>
+    <body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <!-- Logo + Title -->
+            <div class="nav-logo">
+                <img src="assets/Mind4Matter logo no background.png" alt="Mind4Matter Logo">
+                <h1>
+                    <a href="index.html" title="Home page">
+                        Mind<span style="color: var(--blue);">4</span>Matter
+                    </a>
+                </h1>
+            </div>
+
+            <!-- Hamburger Menu (for Mobile) -->
+            <button class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul id="nav-menu">
+                <li><a href="index.html" title="Home page">Home</a></li>
+                <li><a href="team.html" title="More about our team">Our Team</a></li>
+                <li><a href="registration.html" title="Join us today!">Registration</a></li>
+            </ul>
+        </div>
+    </nav>
+        <!--main content-->
+        <main>
+            <h2 class="fancy-heading">
+                Upcoming <span>Events</span>
+            </h2>
+            <div class="grid">
+                <a href="sample.html" style="background-image: url(https://images.unsplash.com/photo-1579208575657-c595a05383b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+                    <p>Mind4Matter Rooftop Seminar</p>
+                </a>
+                <a style="background-image: url(https://images.unsplash.com/photo-1579208575657-c595a05383b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+                    <p>
+                        More events coming soon!
+                    </p>
+                </a>
+            </div>
+        </main>
+        <!--footer-->
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <p class="copyright">
+                        © 2025 Mind4Matter. All rights reserved.
+                    </p>
+                </div>
+                <div>
+                    <p class="copyright">
+                        Made with courtesy of <a href="https://www.bytepenguin.com/" title="BytePenguin's website"><u>BytePenguin</u></a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function toggleMenu() {
+                document.getElementById("nav-menu").classList.toggle("active");
+                document.querySelector(".hamburger").classList.toggle("active");
+            }
+        </script>
+        
+    </body>
+</html>

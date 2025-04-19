@@ -508,3 +508,39 @@ h2 {
         height: 150px;
     }
 }
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+}
+
+.grid a {
+    width: 250px;
+    min-height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(32, 48, 121, 0.5);
+    background-blend-mode: multiply;
+    transition: all ease-in-out 0.2s;
+    box-shadow: 0 0 15px var(--shadow);
+    color: var(--white);
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.grid a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px var(--blue);
+}
