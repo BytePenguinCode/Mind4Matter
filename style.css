@@ -501,3 +501,10 @@ h2 {
     margin: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
+
+/* makes the images smaller */
+@media (max-width: 768px) {
+    .photo-gallery img {
+        height: 150px;
+    }
+}
